@@ -4,6 +4,9 @@
 [![License](https://poser.pugx.org/brozot/laravel-fcm/license)](https://packagist.org/packages/brozot/laravel-fcm)
 
 ## Introduction
+*** Added support for Images `->setImage('url image')`
+
+## Introduction
 
 Laravel-FCM is an easy to use package working with both Laravel and Lumen for sending push notification with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM).
 
@@ -21,7 +24,7 @@ It currently **only supports HTTP protocol** for :
 To get the latest version of Laravel-FCM on your project, require it from "composer":
 
 
-	$ composer require brozot/laravel-fcm
+	$ composer require Uspex/laravel-fcm
 
 
 Or you can add it directly in your composer.json file:
@@ -84,7 +87,7 @@ class_alias(\LaravelFCM\Facades\FCM::class, 'FCM');
 class_alias(\LaravelFCM\Facades\FCMGroup::class, 'FCMGroup');
 ```
 
-Copy the config file ```fcm.php``` manually from the directory ```/vendor/brozot/laravel-fcm/config``` to the directory ```/config ``` (you may need to create this directory).
+Copy the config file ```fcm.php``` manually from the directory ```/vendor/Uspex/laravel-fcm/config``` to the directory ```/config ``` (you may need to create this directory).
 
 
 ### Package Configuration
@@ -131,7 +134,8 @@ $optionBuilder = new OptionsBuilder();
 $optionBuilder->setTimeToLive(60*20);
 
 $notificationBuilder = new PayloadNotificationBuilder('my title');
-$notificationBuilder->setBody('Hello world')
+$notificationBuilder->setBody('Hello world')    
+                    ->setImage('https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png')
 				    ->setSound('default');
 
 $dataBuilder = new PayloadDataBuilder();
@@ -170,6 +174,7 @@ $optionBuilder->setTimeToLive(60*20);
 
 $notificationBuilder = new PayloadNotificationBuilder('my title');
 $notificationBuilder->setBody('Hello world')
+                    ->setImage('https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png')
 				    ->setSound('default');
 
 $dataBuilder = new PayloadDataBuilder();
@@ -220,6 +225,7 @@ use LaravelFCM\Message\Topics;
 ```php
 $notificationBuilder = new PayloadNotificationBuilder('my title');
 $notificationBuilder->setBody('Hello world')
+                    ->setImage('https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png')
 				    ->setSound('default');
 
 $notification = $notificationBuilder->build();
@@ -246,6 +252,7 @@ It sends notification to devices registered at the following topics:
 ```php
 $notificationBuilder = new PayloadNotificationBuilder('my title');
 $notificationBuilder->setBody('Hello world')
+                    ->setImage('https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png')
 				    ->setSound('default');
 
 $notification = $notificationBuilder->build();
@@ -275,6 +282,7 @@ $notificationKey = ['a_notification_key'];
 
 $notificationBuilder = new PayloadNotificationBuilder('my title');
 $notificationBuilder->setBody('Hello world')
+                    ->setImage('https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png')
                         ->setSound('default');
 
 $notification = $notificationBuilder->build();
@@ -354,6 +362,7 @@ $notificationBuilder = new PayloadNotificationBuilder();
 $notificationBuilder->setTitle('title')
             		->setBody('body')
             		->setSound('sound')
+                    ->setImage('https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png')
             		->setBadge('badge');
 
 $notification = $notificationBuilder->build();
