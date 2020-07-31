@@ -24,7 +24,7 @@ It currently **only supports HTTP protocol** for :
 To get the latest version of Laravel-FCM on your project, require it from "composer":
 
 
-	$ composer require uspex/laravel-fcm-set-image
+	$ composer require uspex/laravel-fcm-set-image:dev-master
 
 
 Or you can add it directly in your composer.json file:
