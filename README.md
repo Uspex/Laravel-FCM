@@ -24,7 +24,7 @@ It currently **only supports HTTP protocol** for :
 To get the latest version of Laravel-FCM on your project, require it from "composer":
 
 
-	$ composer require Uspex/laravel-fcm
+	$ composer require uspex/laravel-fcm
 
 
 Or you can add it directly in your composer.json file:
@@ -87,7 +87,7 @@ class_alias(\LaravelFCM\Facades\FCM::class, 'FCM');
 class_alias(\LaravelFCM\Facades\FCMGroup::class, 'FCMGroup');
 ```
 
-Copy the config file ```fcm.php``` manually from the directory ```/vendor/Uspex/laravel-fcm/config``` to the directory ```/config ``` (you may need to create this directory).
+Copy the config file ```fcm.php``` manually from the directory ```/vendor/uspex/laravel-fcm/config``` to the directory ```/config ``` (you may need to create this directory).
 
 
 ### Package Configuration
