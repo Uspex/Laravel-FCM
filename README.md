@@ -87,7 +87,7 @@ class_alias(\LaravelFCM\Facades\FCM::class, 'FCM');
 class_alias(\LaravelFCM\Facades\FCMGroup::class, 'FCMGroup');
 ```
 
-Copy the config file ```fcm.php``` manually from the directory ```/vendor/uspex/laravel-fcm/config``` to the directory ```/config ``` (you may need to create this directory).
+Copy the config file ```fcm.php``` manually from the directory ```/vendor/uspex/laravel-fcm-set-image/config``` to the directory ```/config ``` (you may need to create this directory).
 
 
 ### Package Configuration
