@@ -1,5 +1,5 @@
 {
-    "name": "uspex/laravel-fcm",
+    "name": "uspex/laravel-fcm-set-image",
     "description": "Laravel / Lumen package for Firebase Cloud Messaging ",
     "keywords": ["laravel", "lumen", "firebase", "notification", "push", "fcm", "firebase cloud messaging"],
     "type": "library",
